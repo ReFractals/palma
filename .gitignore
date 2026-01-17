@@ -1,0 +1,52 @@
+# Build outputs
+build/
+*.o
+*.a
+*.so
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Dependency files
+*.d
+
+# Test outputs
+test_results/
+*.log
+
+# Coverage
+*.gcov
+*.gcda
+*.gcno
+coverage/
+
+# Documentation build
+docs/_build/
+docs/html/
+
+# Archives
+*.tar.gz
+*.zip
+
+# Temporary files
+tmp/
+temp/
+*.tmp

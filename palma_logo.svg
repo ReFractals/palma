@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <g stroke="#0E3B2E" stroke-width="10"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Matrix grid (secondary structure) -->
+    <g opacity="0.25">
+      <path d="M64 148H192"/>
+      <path d="M64 184H192"/>
+      <path d="M96 132V224"/>
+      <path d="M128 132V224"/>
+      <path d="M160 132V224"/>
+    </g>
+
+    <!-- Palm trunk (column vector) -->
+    <path d="M128 224C126 198 132 170 142 144"/>
+
+    <!-- Palm fronds -->
+    <path d="M128 120C104 96 80 90 60 92"/>
+    <path d="M128 120C108 96 96 72 92 52"/>
+    <path d="M128 120C148 96 160 72 164 52"/>
+    <path d="M128 120C152 96 176 90 196 92"/>
+
+    <!-- Crown hub -->
+    <path d="M120 128H136"/>
+  </g>
+</svg>

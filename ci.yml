@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        compiler: [gcc, clang]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential
+    
+    - name: Build with ${{ matrix.compiler }}
+      run: |
+        CC=${{ matrix.compiler }} make all
+    
+    - name: Run examples
+      run: |
+        ./build/bin/example_graphs
+        ./build/bin/example_eigenvalue
+
+  build-arm:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install ARM cross-compiler
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc-aarch64-linux-gnu
+    
+    - name: Cross-compile for ARM64
+      run: |
+        CC=aarch64-linux-gnu-gcc make all
+    
+    - name: Check binaries
+      run: |
+        file build/bin/example_graphs
+        file build/lib/libpalma.a
+
+  static-analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install cppcheck
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cppcheck
+    
+    - name: Run cppcheck
+      run: |
+        cppcheck --enable=warning,style,performance \
+                 --error-exitcode=1 \
+                 --suppress=missingIncludeSystem \
+                 src/ include/
