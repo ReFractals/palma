@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ReFractals/palma/main/assets/palma_logo.svg" alt="PALMA Logo" width="200">
+  <img src="https://raw.githubusercontent.com/ReFractals/palma/main/palma_logo.svg" alt="PALMA Logo" width="200">
 </p>
 <h1 align="center">PALMA</h1>
 <h3 align="center">Parallel Algebra Library for Max-plus Applications</h3>
