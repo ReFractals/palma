@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="assets/palma_logo.svg" alt="PALMA Logo" width="200">
+  <img src="https://raw.githubusercontent.com/ReFractals/palma/main/assets/palma_logo.svg" alt="PALMA Logo" width="200">
 </p>
-
 <h1 align="center">PALMA</h1>
 <h3 align="center">Parallel Algebra Library for Max-plus Applications</h3>
 
@@ -20,7 +19,7 @@
 
 ## Overview
 
-**PALMA** is a dependency-free C99 library for tropical (max-plus/min-plus) linear algebra, optimized for ARM NEON SIMD. It provides efficient implementations of semiring matrix operations, graph algorithms, eigenvalue computation, and real-time scheduling—all in a single lightweight package.
+**PALMA** is a dependency-free C99 library for tropical (max-plus/min-plus) linear algebra, optimized for ARM NEON SIMD. It provides efficient implementations of semiring matrix operations, graph algorithms, eigenvalue computation, and real-time scheduling, all in a single lightweight package.
 
 ### Key Features
 
